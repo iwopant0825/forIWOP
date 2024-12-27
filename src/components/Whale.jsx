@@ -25,9 +25,8 @@ export function Whale(props) {
       actions['swim.002'].play()
       actions['swim.002'].timeScale = 1.2 // 애니메이션 속도 1.2배로 설정
   }, [actions])
-  console.log(actions)
   return (
-    <group scale={viewport.width>6? viewport.width/65:viewport.width/25} ref={group} {...props} dispose={null}>
+    <group scale={viewport.width>6? viewport.width/57:viewport.width/25} ref={group} {...props} dispose={null}>
       <group name="Scene">
         <group name="아마튜어" position={[0, 6.024, 0]} rotation={[0, -0.014, 0]}>
           <primitive object={nodes.what} />
@@ -49,7 +48,7 @@ export function Whale(props) {
             <skinnedMesh name="Cube001_1" geometry={nodes.Cube001_1.geometry} skeleton={nodes.Cube001_1.skeleton}>
               <MeshTransmissionMaterial 
                   color={'#0189eb'} // 재질의 색상
-                  backside={true} // 재질의 뒷면��� 렌더링할지 여부
+                  backside={true} // 재질의 뒷면 렌더링할지 여부
                   thickness={0.3} // 재질의 두께
                   roughness={0.3} // 재질의 거칠기
                   transmission={0} // 빛의 투과율

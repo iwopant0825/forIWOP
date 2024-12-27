@@ -3,12 +3,12 @@ import styled from "styled-components";
 export default function Section1() {
   return (
     <Layout>
-      <Title>
+      {/* <Title>
         선린인터넷고등학교 웹 개발 전문 동아리
       </Title>
       <LeftText>
         HTML&nbsp;&nbsp;&nbsp;CSS&nbsp;&nbsp;&nbsp;JAVASCRIPT
-      </LeftText>
+      </LeftText> */}
     </Layout>
   );
 }

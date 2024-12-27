@@ -22,28 +22,30 @@ export default function App() {
     <Suspense fallback={<Loading/>}>
     <Layout>
       <OverHeader scrollTest={scrollTest}/>
-      <Canvas style={{ position: "absolute" }}>
-        <color attach="background" args={["#efeff4"]} />
-        <Scene sceneAn={sceneAn}/>
+      <StyledCanvas style={{ position: "absolute" }}>
+        <Scene sceneAn={scrollTest}/>
         <directionalLight position={positionset} intensity={12}/>
         {/* <Box scale={0.2} position={positionset}/> */}
         <ambientLight intensity={0.3}/>
-        <ScrollControls pages={5} damping={0.3}>
+        <ScrollControls pages={10} damping={0.2}>
           <ScrollManager />
           <Scroll html style={{ width: "100%",zIndex:10  }}>
             <Over setScrollTest={setScrollTest} setSceneAn={setSceneAn}/>
           </Scroll>
-          <Over3D/>
-        </ScrollControls>
-        
-      </Canvas>
+          <Over3D scrollTest={scrollTest}/>
+        </ScrollControls>      
+      </StyledCanvas>
     </Layout>
     </Suspense>
   );
 }
-
+const StyledCanvas = styled(Canvas)`
+  position: absolute;
+  /* background: radial-gradient(121.72% 64.92% at 72.18% 40.18%, #ffffff 10%, #ffffff 100%); */
+  
+`;
 const Layout = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
-`;
+`

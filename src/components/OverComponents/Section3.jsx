@@ -3,19 +3,53 @@ import styled from "styled-components";
 export default function Section3() {
   return (
     <Layout>
-      <Title>TEST3</Title>
+      <Title>
+        <Introduce>INTRODUCE</Introduce>
+        <TitleText>
+          2001년 설립된
+          <br />
+          소프트웨어과{" "}
+          <TitleTextGradient>
+            유일의
+            <br />웹 개발 전공 동아리
+          </TitleTextGradient>
+        </TitleText>
+      </Title>
+
+      <SmallTitle>소프트웨어과에서 가장 오래된 동아리</SmallTitle>
+      
     </Layout>
   );
 }
 const Layout = styled.div`
+  padding: 0px 130px;
   width: 100%;
-  height: 100dvh;
+  /* background-color: #dadada; */
 `;
+
+
+const SmallTitle = styled.div`
+  text-align:center;
+  font-size:22px;
+  padding:160px;
+`;
+
+
+
 const Title = styled.div`
+  flex-direction: column;
   display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px;
+`;
+const Introduce = styled.span`
+  font-size: 20px;
+`;
+const TitleText = styled.span`
+  font-family: "Pretendard-Bold";
+  font-size: 130px;
+`;
+const TitleTextGradient = styled.span`
+  font-family: "Pretendard-Bold";
+  background: linear-gradient(165deg, #22e400 23.12%, #00c3ff 79.58%);
+  -webkit-background-clip: text;
+  color: transparent;
 `;

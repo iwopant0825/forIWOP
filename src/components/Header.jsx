@@ -11,6 +11,7 @@ export default function OverHeader({scrollTest}) {
           <ListButton>INTRODUCE</ListButton>
           <ListButton>CURRICURAUM</ListButton>
           <ListButton>History</ListButton>
+          <ListButton>{scrollTest}</ListButton>
         </List>
       </HeaderLayout>
     </>
@@ -25,6 +26,7 @@ const HeaderLayout = styled.div`
   z-index: 999;
   align-items:center;
   justify-content:space-between;
+  background-color: rgba(255, 255, 255, 0.9); /* 배경을 검정에서 살짝 투명하게 변경 */
   @media (max-width: 600px) {
     padding: 20px 20px;
   }
