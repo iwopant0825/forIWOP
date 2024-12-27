@@ -27,7 +27,7 @@ export default function App() {
         <directionalLight position={positionset} intensity={12}/>
         {/* <Box scale={0.2} position={positionset}/> */}
         <ambientLight intensity={0.3}/>
-        <ScrollControls pages={10} damping={0.2}>
+        <ScrollControls pages={11.75} damping={0.1}>
           <ScrollManager />
           <Scroll html style={{ width: "100%",zIndex:10  }}>
             <Over setScrollTest={setScrollTest} setSceneAn={setSceneAn}/>
@@ -45,7 +45,7 @@ const StyledCanvas = styled(Canvas)`
   
 `;
 const Layout = styled.div`
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     display: none;
-  }
+  } */
 `

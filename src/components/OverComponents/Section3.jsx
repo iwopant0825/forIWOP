@@ -24,17 +24,37 @@ export default function Section3() {
 const Layout = styled.div`
   padding: 0px 130px;
   width: 100%;
-  /* background-color: #dadada; */
+  @media (max-width: 1200px) {
+    padding: 0px 100px;
+  }
+  @media (max-width: 992px) {
+    padding: 0px 70px;
+  }
+  @media (max-width: 768px) {
+    padding: 0px 40px;
+  }
+  @media (max-width: 576px) {
+    padding: 0px 20px;
+  }
 `;
-
 
 const SmallTitle = styled.div`
-  text-align:center;
-  font-size:22px;
-  padding:160px;
+  text-align: center;
+  font-size: 22px;
+  padding: 160px;
+  @media (max-width: 1200px) {
+    padding: 120px;
+  }
+  @media (max-width: 992px) {
+    padding: 80px;
+  }
+  @media (max-width: 768px) {
+    padding: 60px;
+  }
+  @media (max-width: 576px) {
+    padding: 40px;
+  }
 `;
-
-
 
 const Title = styled.div`
   flex-direction: column;
@@ -45,7 +65,7 @@ const Introduce = styled.span`
 `;
 const TitleText = styled.span`
   font-family: "Pretendard-Bold";
-  font-size: 130px;
+  font-size: 8vw;
 `;
 const TitleTextGradient = styled.span`
   font-family: "Pretendard-Bold";

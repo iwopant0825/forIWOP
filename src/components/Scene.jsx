@@ -19,29 +19,31 @@ import { BlendFunction } from "postprocessing";
 
 export default function Scene({ sceneAn }) {
   const { viewport } = useThree();
+  if (viewport.width > 6) {
+    useFrame(({ mouse, camera }) => {
+      camera.position.x = THREE.MathUtils.lerp(
+        camera.position.x,
+        mouse.x * 1,
+        0.03
+      );
+      camera.position.y = THREE.MathUtils.lerp(
+        camera.position.y,
+        mouse.y * 1,
+        0.01
+      );
+      camera.position.z = THREE.MathUtils.lerp(
+        camera.position.z,
+        Math.max(4, Math.abs(mouse.x * mouse.y * 4)),
+        0.01
+      );
+      camera.rotation.y = THREE.MathUtils.lerp(
+        camera.rotation.y,
+        mouse.x * -Math.PI * 0.025,
+        0.001
+      );
+    });
+  }
 
-  useFrame(({ mouse, camera }) => {
-    camera.position.x = THREE.MathUtils.lerp(
-      camera.position.x,
-      mouse.x * 1,
-      0.03
-    );
-    camera.position.y = THREE.MathUtils.lerp(
-      camera.position.y,
-      mouse.y * 1,
-      0.01
-    );
-    camera.position.z = THREE.MathUtils.lerp(
-      camera.position.z,
-      Math.max(4, Math.abs(mouse.x * mouse.y * 4)),
-      0.01
-    );
-    camera.rotation.y = THREE.MathUtils.lerp(
-      camera.rotation.y,
-      mouse.x * -Math.PI * 0.025,
-      0.001
-    );
-  });
   const IwopWhale = useSpring({
     rotation:
       sceneAn > 1.6 && sceneAn < 3

@@ -30,10 +30,22 @@ export default function Section4() {
 }
 const Layout = styled.div`
   width: 100%;
-  height: 100dvh;
-  padding: 0 330px;
+  height:1000px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: 768px) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 100px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 330px;
+  }
 `;
 const Text = styled.div`
   font-family: "Pretendard-Bold";
