@@ -120,12 +120,6 @@ export default function Over({setSceneAn,setScrollTest}) {
         <div ref={test5} style={{ width: "100%" }}>
           <Section8/>
         </div>
-        <div ref={test5} style={{ width: "100%" }}>
-          <Section9/>
-        </div>
-        <div ref={test5} style={{ width: "100%" }}>
-          <Section10/>
-        </div>
       </>
     );
   }
