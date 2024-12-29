@@ -25,8 +25,8 @@ export default function App() {
       const height = overRef.current.clientHeight;
       const viewportHeight = window.innerHeight;
       setPages(height / viewportHeight);
+      console.log(pages)
     }
-    console.log(pages)
   }, [overRef.current]);
 
   return (
