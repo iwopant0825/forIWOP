@@ -59,7 +59,7 @@ export default function Scene({ sceneAn = 0 }) {
         // ? [-1.3, 0, 0]
         : [0, -1.2, 0], // <----sceneAn==1
 
-    config: { tension: 20 }, // 애니메이션 속도 조절
+    config: { tension: 10 }, // 애니메이션 속도 조절
   });
 
   return (

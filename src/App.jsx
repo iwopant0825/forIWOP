@@ -33,7 +33,7 @@ export default function App() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, [overRef.current, pages]);
+  }, [overRef.current]);
 
   return (
     <Suspense fallback={<Loading />}>

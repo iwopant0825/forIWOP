@@ -11,7 +11,7 @@ export default function OverHeader({scrollTest}) {
           <ListButton>INTRODUCE</ListButton>
           <ListButton>CURRICURAUM</ListButton>
           <ListButton>History</ListButton>
-          <ListButton>{scrollTest}</ListButton>
+          {/* <ListButton>{scrollTest}</ListButton> */}
         </List>
       </HeaderLayout>
     </>
