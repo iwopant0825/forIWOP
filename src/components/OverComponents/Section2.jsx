@@ -31,11 +31,11 @@ const Group = styled.div`
   gap: 10px;
 `;
 const Title = styled.div`
-  font-size: calc(16px + 1vw);
+  font-size: calc(13px + 1vw);
   font-family: "Pretendard-Bold";
 `;
 const ConText = styled.div`
-  font-size: calc(16px + 1vw);
+  font-size: calc(13px + 1vw);
   font-family: "Pretendard-Bold";
 `;
 const HighLight = styled.span`

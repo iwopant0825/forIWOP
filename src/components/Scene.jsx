@@ -17,9 +17,9 @@ import {
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 
-export default function Scene({ sceneAn }) {
+export default function Scene({ sceneAn = 0 }) {
   const { viewport } = useThree();
-  if (viewport.width > 6) {
+  if (viewport && viewport.width > 6) {
     useFrame(({ mouse, camera }) => {
       camera.position.x = THREE.MathUtils.lerp(
         camera.position.x,

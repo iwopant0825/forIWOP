@@ -21,13 +21,20 @@ export default function App() {
   const positionset = [1, -1, 3];
 
   useEffect(() => {
-    if (overRef.current) {
-      const height = overRef.current.clientHeight;
-      const viewportHeight = window.innerHeight;
-      setPages(height / viewportHeight);
-      console.log(pages)
-    }
-  }, [overRef.current]);
+    const handleResize = () => {
+      if (overRef.current) {
+        const height = overRef.current.clientHeight;
+        const viewportHeight = window.innerHeight;
+        setPages(height / viewportHeight);
+        console.log(pages);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [overRef.current, pages]);
 
   return (
     <Suspense fallback={<Loading />}>
