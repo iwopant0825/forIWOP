@@ -30,11 +30,16 @@ export default function Section4() {
 }
 const Layout = styled.div`
   width: 100%;
-  height:1000px;
+  height:1400px;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
-
+  @media (max-width: 1000px) {
+    height:800px;
+  }
+  @media (max-width: 600px) {
+    height:400px;
+  }
   @media (min-width: 768px) {
     padding: 0 50px;
   }
@@ -50,10 +55,12 @@ const Layout = styled.div`
 const Text = styled.div`
   font-family: "Pretendard-Bold";
   color: #86868b;
-  line-height: 25px;
-  letter-spacing: 0.231px;
-  font-size: 21px;
+  font-size: 2vw;
   width: 40%;
+  @media (max-width: 600px) {
+    width: 70%;
+  }
+
 `;
 const HightText = styled.span`
   font-family: "Pretendard-Bold";

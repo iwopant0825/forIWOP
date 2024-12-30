@@ -21,7 +21,7 @@ export default function Section8() {
         </SmallconText>
       </div>
       <ImageContainer>
-        <img width={400} src={TapieLogo} />
+        <ResponsiveImage src={TapieLogo} alt="Tapie Logo" />
       </ImageContainer>
       <Title>TAPE THE GAP BETWEEN THE WORLD </Title>
     </Layout>
@@ -31,14 +31,14 @@ const Title = styled.span`
   color: #bbb;
   font-family: "Pretendard-Regular";
   text-align: center;
-  font-size: 40px;
+  font-size: 4vw;
   margin-top:40px;
 `;
 
 const SmallTitle = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 72px;
+  font-size: 8vw;
   font-family: "Pretendard-Bold";
   color: #ffffff;
 `;
@@ -54,6 +54,18 @@ const SmallconText = styled.span`
 
 const Layout = styled.div`
   padding: 170px 130px;
+  @media (max-width: 1200px) {
+    padding: 150px 100px;
+  }
+  @media (max-width: 992px) {
+    padding: 130px 70px;
+  }
+  @media (max-width: 768px) {
+    padding: 100px 40px;
+  }
+  @media (max-width: 576px) {
+    padding: 70px 20px;
+  }
   width: 100%;
   background-color: black;
   display: flex;
@@ -67,4 +79,10 @@ const ImageContainer = styled.div`
   align-items: center;
   width: 100%;
   margin-top: 20px;
+`;
+
+const ResponsiveImage = styled.img`
+  width: 100%;
+  max-width: 200px;
+  height: auto;
 `;

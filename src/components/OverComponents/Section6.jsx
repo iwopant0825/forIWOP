@@ -25,8 +25,8 @@ export default function Section6() {
           <CircleLine
             style={{ justifyContent: "space-around", marginBottom: "30px" }}
           >
-            <Logo src={Htmlcssjs} />
-            <Logo src={ReactLogo} />
+            <Logo1 src={Htmlcssjs} />
+            <Logo2 src={ReactLogo} />
           </CircleLine>
           <Line />
           <CircleLine>
@@ -52,8 +52,33 @@ const Layout = styled.div`
   width: 100%;
   padding: 170px 130px;
   background-color: black;
+  @media (max-width: 1200px) {
+    padding: 150px 100px;
+  }
+  @media (max-width: 992px) {
+    padding: 130px 70px;
+  }
+  @media (max-width: 768px) {
+    padding: 100px 40px;
+  }
+  @media (max-width: 576px) {
+    padding: 70px 20px;
+  }
 `;
-const Logo = styled.img``;
+const Logo1 = styled.img`
+  width: 200px;
+  height: auto;
+  @media (max-width: 768px) {
+    width: 100px;
+  }
+`;
+const Logo2 = styled.img`
+  width: 100px;
+  height: auto;
+  @media (max-width: 768px) {
+    width: 60px;
+  }
+`;
 const ChartText = styled.div`
   color: white;
   font-size: 24.618px;
@@ -92,7 +117,7 @@ const Introduce = styled.span`
 `;
 const TitleText = styled.span`
   font-family: "Pretendard-Bold";
-  font-size: 130px;
+  font-size: 8vw;
 `;
 const Hight = styled.span`
   font-family: "Pretendard-Bold";

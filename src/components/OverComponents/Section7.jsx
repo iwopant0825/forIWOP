@@ -74,8 +74,8 @@ export default function Section7() {
 const Box = styled.div`
   width: 100%;
   display: flex;
-  height: 500px;
-  margin-top:100px;
+  height: 40vw;
+  margin-top: 100px;
 `;
 const BoxLeft = styled.div`
   width: 50%;
@@ -83,39 +83,58 @@ const BoxLeft = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  img {
+    max-width: 80%;
+    height: auto;
+  }
 `;
 const BoxRight = styled.div`
   width: 50%;
   background-color: #f2f2f2;
-  padding: 162px 47px;
+  padding: 10vw 3vw;
 `;
 const BoxTtile = styled.div`
   font-family: "Pretendard-Bold";
-  font-size: 43px;
-  margin-bottom:50px;
+  font-size: 3.5vw;
+  margin-bottom: 50px;
 `;
 const BoxText = styled.div`
   color: #86868b;
-  font-size: 24px;
+  font-size: 4vw;
 `;
 
 const Layout = styled.div`
   width: 100%;  
   padding: 170px 130px;
+  @media (max-width: 1200px) {
+    padding: 150px 100px;
+  }
+  @media (max-width: 992px) {
+    padding: 130px 70px;
+  }
+  @media (max-width: 768px) {
+    padding: 100px 40px;
+  }
+  @media (max-width: 576px) {
+    padding: 70px 20px;
+  }
 `;
 
 const SmallTitle = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 72px;
+  font-size: 10vw;
   font-family: "Pretendard-Bold";
   margin-top: 270px;
+  @media (max-width: 992px) {
+    margin-top: 100px;;
+  }
   color: #1d1d1f;
 `;
 const SmallconText = styled.span`
   display: flex;
   justify-content: center;
-  font-size: 21px;
+  font-size: 2vw;
   width: 70%;
   margin-top: 20px;
   color: #86868b;
@@ -145,5 +164,5 @@ const Introduce = styled.span`
 const TitleText = styled.span`
   position: relative;
   font-family: "Pretendard-Bold";
-  font-size: 130px;
+  font-size: 8vw;
 `;

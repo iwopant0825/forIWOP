@@ -26,7 +26,12 @@ export function Whale(props) {
       actions['swim.002'].timeScale = 1.2 // 애니메이션 속도 1.2배로 설정
   }, [actions])
   return (
-    <group scale={viewport.width>6? viewport.width/57:viewport.width/25} ref={group} {...props} dispose={null}>
+    <group 
+      scale={viewport.width > 6 ? viewport.width / 57 : viewport.width / 25} 
+      ref={group} 
+      {...props} 
+      dispose={null}
+    >
       <group name="Scene">
         <group name="아마튜어" position={[0, 6.024, 0]} rotation={[0, -0.014, 0]}>
           <primitive object={nodes.what} />

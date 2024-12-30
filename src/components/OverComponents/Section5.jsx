@@ -19,6 +19,9 @@ const Layout = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media (max-width: 768px) {
+    padding: 200px 0px;
+  }
 `;
 
 const Title = styled.div`

@@ -5,7 +5,7 @@ export default function OverHeader({scrollTest}) {
     <>
       <HeaderLayout>
         <List>
-          <img width={60} src={IwopLogo}/>
+          <ResponsiveLogo src={IwopLogo}/>
         </List>
         <List>
           <ListButton>INTRODUCE</ListButton>
@@ -17,6 +17,13 @@ export default function OverHeader({scrollTest}) {
     </>
   );
 }
+
+const ResponsiveLogo = styled.img`
+  width: 60px;
+  @media (max-width: 600px) {
+    width: 40px;
+  }
+`;
 
 const HeaderLayout = styled.div`
   width: 100%;
